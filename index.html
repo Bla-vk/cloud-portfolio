@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Precious Olayemi Awoyemi — AWS Cloud Engineering Projects</title>
+  <meta name="description"
+    content="Hands-on AWS cloud engineering projects by Precious Olayemi Awoyemi — VPC architecture, EC2 deployment, S3 static hosting, and IAM access management.">
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%230A0E17'/%3E%3Ccircle cx='50' cy='50' r='16' fill='%23F2A93B'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <a href="#main" class="skip-link">Skip to content</a>
+
+  <header class="nav">
+    <div class="nav-inner">
+      <a href="#top" class="wordmark">olayemi@cloud:~$<span class="cursor" aria-hidden="true"></span></a>
+      <nav class="nav-links" id="navLinks">
+        <a href="#about">About</a>
+        <a href="#approach">Approach</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#certifications">Certifications</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false"
+        aria-controls="navLinks">☰</button>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- HERO -->
+    <section class="hero" id="top">
+      <div class="container">
+        <span class="eyebrow">AWS Cloud Engineering</span>
+        <h1>Hands-on AWS work, project by project.</h1>
+        <p class="sub">Four guided builds across VPC, EC2, S3 and IAM — each one designed, broken, debugged, and
+          documented on the way to becoming a cloud engineer.</p>
+        <div class="hero-ctas">
+          <a href="#projects" class="btn btn-primary">View Projects</a>
+          <a href="https://github.com/Bla-vk/AWS-Beginner-Roadmap" class="btn btn-secondary" target="_blank"
+            rel="noopener">View on GitHub ↗</a>
+          <a href="Precious_Olayemi_Awoyemi_Resume.pdf" class="btn btn-secondary" download>Download Résumé ↓</a>
+        </div>
+
+        <div class="console reveal">
+          <div class="console-head">
+            <div class="dots"><span></span><span></span><span></span></div>
+            <span class="console-title">project_status.log</span>
+          </div>
+          <dl class="console-body">
+            <div class="console-row">
+              <dt>PROJECTS BUILT</dt>
+              <dd>4 <span class="context">— VPC · EC2 · S3 · IAM</span></dd>
+            </div>
+            <div class="console-row">
+              <dt>TRAINING</dt>
+              <dd>AWS Cloud Practitioner Essentials <span class="context">— Complete</span></dd>
+            </div>
+            <div class="console-row">
+              <dt>CURRENT FOCUS</dt>
+              <dd>AWS Cloud Practitioner exam <span class="context">(CLF-C02)</span></dd>
+            </div>
+            <div class="console-row">
+              <dt>NEXT UP</dt>
+              <dd>AWS Solutions Architect Associate <span class="context">(SAA-C03)</span></dd>
+            </div>
+            <div class="console-row">
+              <dt>REPO</dt>
+              <dd>github.com/Bla-vk/AWS-Beginner-Roadmap</dd>
+            </div>
+            <div class="console-row">
+              <dt>STATUS</dt>
+              <dd><span class="pulse-dot" aria-hidden="true"></span>Actively building</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section about" id="about">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2>About</h2>
+        </div>
+        <div class="reveal">
+          <p>I'm Precious Olayemi Awoyemi, a Computer Engineer from Nigeria. I spent the past year maintaining live
+            Communications, Navigation and Surveillance systems at Nigeria's Airspace Management Agency, keeping
+            mission-critical infrastructure online at 99% uptime under real operational pressure.</p>
+          <p>I'm now applying that same discipline to the cloud — building hands-on with AWS and working towards Cloud
+            Practitioner certification. This site tracks that work.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- APPROACH -->
+    <section class="section approach" id="approach">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2>Approach</h2>
+        </div>
+        <div class="reveal">
+          <p>Each project starts with the theory on AWS Skill Builder, then gets rebuilt hands-on through NextWork's
+            guided labs — real AWS Console and CLI/CloudShell, real errors, real fixes. Every build is documented and
+            pushed to GitHub as part of an ongoing AWS roadmap.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2>Tools &amp; Concepts</h2>
+        </div>
+        <div class="skills-grid">
+          <div class="skill-card reveal">
+            <h3>AWS Services</h3>
+            <div class="chips">
+              <span class="chip">Amazon VPC</span><span class="chip">EC2</span><span class="chip">S3</span>
+              <span class="chip">IAM</span><span class="chip">Security Groups</span><span class="chip">Network
+                ACLs</span>
+              <span class="chip">AWS CLI</span><span class="chip">CloudShell</span>
+            </div>
+          </div>
+          <div class="skill-card reveal">
+            <h3>Core Concepts</h3>
+            <div class="chips">
+              <span class="chip">CIDR</span><span class="chip">Route Tables</span><span class="chip">Internet
+                Gateway</span>
+              <span class="chip">NAT Gateway</span><span class="chip">Least Privilege</span><span class="chip">JSON IAM
+                Policies</span>
+              <span class="chip">Bucket Policies</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2>Cloud Projects</h2>
+          <p class="section-intro">Guided AWS builds — each one designed, broken, debugged, and documented by hand.</p>
+        </div>
+
+        <div class="projects-grid">
+
+          <article class="card reveal">
+            <div class="card-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                <rect x="3" y="3" width="18" height="18" rx="2" stroke-dasharray="3 2" />
+                <circle cx="8" cy="9" r="1.6" fill="currentColor" stroke="none" />
+                <circle cx="16" cy="9" r="1.6" fill="currentColor" stroke="none" />
+                <circle cx="8" cy="16" r="1.6" fill="currentColor" stroke="none" />
+                <path d="M8 10.6V14.4M9.6 9H14.4" />
+              </svg>
+            </div>
+            <span class="card-tag">NextWork Guided Cloud Project · Aug 2026</span>
+            <h3>AWS VPC Architecture &amp; Security</h3>
+            <ul>
+              <li>Designed a custom Amazon VPC — CIDR blocks, public and private subnets, an Internet Gateway — built
+                through the AWS Console and CLI/CloudShell.</li>
+              <li>Secured traffic with route tables, Security Groups, and Network ACLs, closing a default security gap
+                with a deny-all baseline on the private subnet.</li>
+            </ul>
+            <div class="card-footer">
+              <div class="card-stack"><span>VPC</span><span>CIDR</span><span>NACLs</span></div>
+              <a class="card-link" href="https://github.com/Bla-vk/AWS-Beginner-Roadmap" target="_blank"
+                rel="noopener">Code ↗</a>
+            </div>
+          </article>
+
+          <article class="card reveal">
+            <div class="card-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                <rect x="4" y="3" width="16" height="5" rx="1" />
+                <rect x="4" y="10" width="16" height="5" rx="1" />
+                <rect x="4" y="17" width="16" height="4" rx="1" />
+                <circle cx="7.5" cy="5.5" r="0.8" fill="currentColor" stroke="none" />
+                <circle cx="7.5" cy="12.5" r="0.8" fill="currentColor" stroke="none" />
+              </svg>
+            </div>
+            <span class="card-tag">NextWork Guided Cloud Project · Aug 2026</span>
+            <h3>EC2 Deployment &amp; Connectivity Testing</h3>
+            <ul>
+              <li>Deployed public and private EC2 instances with SSH key pairs and tiered Security Groups across a full
+                VPC topology, including NAT gateways for high availability.</li>
+              <li>Diagnosed and resolved connectivity failures between instances using Security Group, NACL, SSH, ping
+                and curl troubleshooting.</li>
+            </ul>
+            <div class="card-footer">
+              <div class="card-stack"><span>EC2</span><span>NAT Gateway</span><span>SSH</span></div>
+              <a class="card-link" href="https://github.com/Bla-vk/AWS-Beginner-Roadmap" target="_blank"
+                rel="noopener">Code ↗</a>
+            </div>
+          </article>
+
+          <article class="card reveal">
+            <div class="card-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                <path d="M5 6c0-1.1 3.13-2 7-2s7 .9 7 2-3.13 2-7 2-7-.9-7-2Z" />
+                <path d="M5 6v12c0 1.1 3.13 2 7 2s7-.9 7-2V6" />
+                <path d="M5 12c0 1.1 3.13 2 7 2s7-.9 7-2" />
+              </svg>
+            </div>
+            <span class="card-tag">NextWork Guided Cloud Project · Aug 2026</span>
+            <h3>Static Website Hosting on S3</h3>
+            <ul>
+              <li>Deployed a static website on Amazon S3 with a live public endpoint, configuring bucket setup and
+                static hosting from scratch.</li>
+              <li>Diagnosed a 403 Forbidden error down to object-level ACLs, then added a bucket policy to block file
+                deletion.</li>
+            </ul>
+            <div class="card-footer">
+              <div class="card-stack"><span>S3</span><span>Static Hosting</span><span>Bucket Policy</span></div>
+              <a class="card-link" href="https://github.com/Bla-vk/AWS-Beginner-Roadmap" target="_blank"
+                rel="noopener">Code ↗</a>
+            </div>
+          </article>
+
+          <article class="card reveal">
+            <div class="card-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                <path d="M12 3 4 6.5v5c0 4.8 3.4 8.5 8 9.5 4.6-1 8-4.7 8-9.5v-5L12 3Z" />
+                <path d="M9.5 12 11 13.5 15 9.5" />
+              </svg>
+            </div>
+            <span class="card-tag">NextWork Guided Cloud Project · Aug 2026</span>
+            <h3>Cloud Security &amp; Access Management with IAM</h3>
+            <ul>
+              <li>Authored a least-privilege JSON IAM policy restricting a simulated user to development-tagged EC2
+                resources, with IAM users, groups and an account alias.</li>
+              <li>Validated allow/deny behavior through direct testing and the IAM Policy Simulator.</li>
+            </ul>
+            <div class="card-footer">
+              <div class="card-stack"><span>IAM</span><span>JSON Policy</span><span>Least Privilege</span></div>
+              <a class="card-link" href="https://github.com/Bla-vk/AWS-Beginner-Roadmap" target="_blank"
+                rel="noopener">Code ↗</a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CERTIFICATIONS -->
+    <section class="section" id="certifications">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2>AWS Certification Path</h2>
+        </div>
+
+        <div class="cert-cols">
+          <div class="cert-col done reveal">
+            <h3>Completed</h3>
+            <div class="cert-row">
+              <span class="cert-name">AWS Cloud Practitioner Essentials<small>Training completed on AWS Skill
+                  Builder</small></span>
+              <span class="pill done">Done</span>
+            </div>
+          </div>
+
+          <div class="cert-col progress reveal">
+            <h3>In Progress / Roadmap</h3>
+            <div class="cert-row">
+              <span class="cert-name">AWS Certified Cloud Practitioner<small>CLF-C02</small></span>
+              <span class="pill progress">In Progress</span>
+            </div>
+            <div class="cert-row">
+              <span class="cert-name">AWS Certified Solutions Architect – Associate<small>SAA-C03</small></span>
+              <span class="pill planned">Planned</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="contact-wrap reveal">
+          <div>
+            <h2>Let's talk</h2>
+            <p>Following along, or hiring for cloud roles — happy to walk through any of the projects above in more
+              detail.</p>
+          </div>
+          <div class="contact-links">
+            <a href="mailto:pawoyemi5@gmail.com">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                <rect x="3" y="5" width="18" height="14" rx="2" />
+                <path d="m4 7 8 6 8-6" />
+              </svg>
+              pawoyemi5@gmail.com
+            </a>
+            <a href="https://github.com/Bla-vk" target="_blank" rel="noopener">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                <path
+                  d="M12 2a10 10 0 0 0-3.16 19.5c.5.1.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.95 0-1.1.39-2 1.03-2.7-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.5 9.5 0 0 1 5 0c1.91-1.3 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.6 1.03 2.7 0 3.85-2.35 4.7-4.58 4.94.36.32.68.94.68 1.9v2.82c0 .27.18.58.69.48A10 10 0 0 0 12 2Z" />
+              </svg>
+              github.com/Bla-vk
+            </a>
+            <a href="https://www.linkedin.com/in/precious-awoyemi-581551100" target="_blank" rel="noopener">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                <rect x="3" y="3" width="18" height="18" rx="2" />
+                <path d="M7.5 10v7M7.5 7v.01M11.5 17v-4.5c0-1.4 1-2.5 2.5-2.5s2.5 1.1 2.5 2.5V17M11.5 10v7" />
+              </svg>
+              linkedin.com/in/precious-awoyemi
+            </a>
+            <a href="Precious_Olayemi_Awoyemi_Resume.pdf" download>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                <path d="M12 3v12m0 0-4-4m4 4 4-4" />
+                <path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2" />
+              </svg>
+              Download résumé
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!--
+    <footer>
+    <p>Built by Precious Olayemi Awoyemi · <span id="year"></span></p>
+  </footer>
+  -->
+
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
