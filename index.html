@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Precious Olayemi Awoyemi — AWS Cloud Engineering Projects</title>
   <meta name="description"
-    content="Hands-on AWS cloud engineering projects by Precious Olayemi Awoyemi — VPC architecture, EC2 deployment, S3 static hosting, and IAM access management.">
+    content="Hands-on AWS cloud engineering projects by Precious Olayemi Awoyemi — VPC architecture, VPC peering and monitoring, EC2 deployment, S3 static hosting, VPC endpoints, and IAM access management.">
   <link rel="icon" type="image/svg+xml"
     href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%230A0E17'/%3E%3Ccircle cx='50' cy='50' r='16' fill='%23F2A93B'/%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -44,8 +44,8 @@
       <div class="container">
         <span class="eyebrow">AWS Cloud Engineering</span>
         <h1>Hands-on AWS work, project by project.</h1>
-        <p class="sub">Four guided builds across VPC, EC2, S3 and IAM — each one designed, broken, debugged, and
-          documented on the way to becoming a cloud engineer.</p>
+        <p class="sub">Six guided builds across VPC, EC2, S3, IAM, peering and private connectivity — each one
+          designed, broken, debugged, and documented on the way to becoming a cloud engineer.</p>
         <div class="hero-ctas">
           <a href="#projects" class="btn btn-primary">View Projects</a>
           <a href="https://github.com/Bla-vk/AWS-Beginner-Roadmap" class="btn btn-secondary" target="_blank"
@@ -61,7 +61,7 @@
           <dl class="console-body">
             <div class="console-row">
               <dt>PROJECTS BUILT</dt>
-              <dd>4 <span class="context">— VPC · EC2 · S3 · IAM</span></dd>
+              <dd>6 <span class="context">— VPC · EC2 · S3 · IAM · Peering · Endpoints</span></dd>
             </div>
             <div class="console-row">
               <dt>TRAINING</dt>
@@ -131,7 +131,8 @@
               <span class="chip">Amazon VPC</span><span class="chip">EC2</span><span class="chip">S3</span>
               <span class="chip">IAM</span><span class="chip">Security Groups</span><span class="chip">Network
                 ACLs</span>
-              <span class="chip">AWS CLI</span><span class="chip">CloudShell</span>
+              <span class="chip">AWS CLI</span><span class="chip">CloudShell</span><span class="chip">CloudWatch</span>
+              <span class="chip">VPC Peering</span><span class="chip">VPC Endpoints</span>
             </div>
           </div>
           <div class="skill-card reveal">
@@ -141,7 +142,8 @@
                 Gateway</span>
               <span class="chip">NAT Gateway</span><span class="chip">Least Privilege</span><span class="chip">JSON IAM
                 Policies</span>
-              <span class="chip">Bucket Policies</span>
+              <span class="chip">Bucket Policies</span><span class="chip">Flow Logs</span><span class="chip">Elastic
+                IP</span>
             </div>
           </div>
         </div>
@@ -153,7 +155,8 @@
       <div class="container">
         <div class="section-head reveal">
           <h2>Cloud Projects</h2>
-          <p class="section-intro">Guided AWS builds — each one designed, broken, debugged, and documented by hand.</p>
+          <p class="section-intro">Six guided AWS builds — each one designed, broken, debugged, and documented by
+            hand.</p>
         </div>
 
         <div class="projects-grid">
@@ -247,6 +250,52 @@
             </ul>
             <div class="card-footer">
               <div class="card-stack"><span>IAM</span><span>JSON Policy</span><span>Least Privilege</span></div>
+              <a class="card-link" href="https://github.com/Bla-vk/AWS-Beginner-Roadmap" target="_blank"
+                rel="noopener">Code ↗</a>
+            </div>
+          </article>
+
+          <article class="card reveal">
+            <div class="card-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                <circle cx="9" cy="12" r="6" />
+                <circle cx="15" cy="12" r="6" />
+              </svg>
+            </div>
+            <span class="card-tag">NextWork Guided Cloud Project · Aug 2026</span>
+            <h3>VPC Peering &amp; Network Monitoring</h3>
+            <ul>
+              <li>Peered two isolated VPCs with unique CIDR blocks, updating route tables and security groups for
+                private EC2-to-EC2 communication, then resolved an Elastic IP requirement to restore instance
+                access.</li>
+              <li>Set up VPC Flow Logs with a dedicated IAM role to capture cross-VPC traffic in CloudWatch, then
+                used Logs Insights to query and analyze traffic patterns.</li>
+            </ul>
+            <div class="card-footer">
+              <div class="card-stack"><span>Peering</span><span>Flow Logs</span><span>CloudWatch</span></div>
+              <a class="card-link" href="https://github.com/Bla-vk/AWS-Beginner-Roadmap" target="_blank"
+                rel="noopener">Code ↗</a>
+            </div>
+          </article>
+
+          <article class="card reveal">
+            <div class="card-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                <path d="M5 4v16M19 4v16" />
+                <path d="M9 12h6M12 9l3 3-3 3" />
+              </svg>
+            </div>
+            <span class="card-tag">NextWork Guided Cloud Project · Aug 2026</span>
+            <h3>Private AWS Access via VPC Endpoints</h3>
+            <ul>
+              <li>Connected an EC2 instance to Amazon S3 using AWS CLI and access keys, validating bucket access and
+                file uploads while noting IAM roles as the least-privilege best practice.</li>
+              <li>Migrated that S3 access to a private VPC Gateway Endpoint, layering bucket and endpoint policies
+                and updating route tables to remove all public internet exposure.</li>
+            </ul>
+            <div class="card-footer">
+              <div class="card-stack"><span>VPC Endpoints</span><span>Bucket Policy</span><span>Private
+                  Access</span></div>
               <a class="card-link" href="https://github.com/Bla-vk/AWS-Beginner-Roadmap" target="_blank"
                 rel="noopener">Code ↗</a>
             </div>
