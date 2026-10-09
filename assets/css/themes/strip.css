@@ -1,0 +1,31 @@
+/* ==========================================================
+   Strip: light, air traffic control flight strips with an amber callsign block on each project.
+   Link this file after base.css in index.html to use it.
+   ========================================================== */
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600&display=swap");
+
+:root {
+  --bg: #E4EAEE; --surface: #FFFFFF; --ink: #12202B; --muted: #45586A; --line: #B7C4CE; --chip-bg: #F3F6F8;
+  --accent: #F2A20C; --accent-ink: #12202B; --link: #0B6770; --focus: #0E7C86;
+  --ok: #0B6B3A; --warn: #8F5400;
+  --radius: 3px; --btn-radius: 3px; --chip-radius: 3px;
+  --font-display: "Barlow Condensed", "Arial Narrow", sans-serif; --font-body: "Barlow", system-ui, sans-serif;
+  --nav-bg: #12202B; --nav-ink: #FFFFFF; --nav-border: 4px solid #F2A20C;
+  --h1-size: clamp(3.1rem, 8vw, 6rem); --h1-leading: .95; --h1-weight: 700; --h1-tracking: -.01em;
+  --h2-size: 2.6rem; --h2-weight: 700; --section-pad: 76px;
+  --proj-cols: 1fr; --proj-gap: 12px;
+}
+
+.project summary { display: grid; grid-template-columns: 124px 1fr; align-items: stretch; }
+.project-code { display: flex; align-items: center; justify-content: center; padding: 14px 8px; font-family: var(--font-display); font-weight: 700; font-size: 2.1rem; line-height: 1; color: var(--accent-ink); background: var(--accent); border-radius: 2px 0 0 2px; }
+.project-main { padding: 20px 24px 6px; }
+.project-body { padding: 0 24px 22px 148px; }
+.project { border-left: 0; }
+.hero h1 { max-width: 12ch; }
+.now { border-left: 10px solid var(--accent); }
+@media (max-width: 720px) {
+  .project summary { grid-template-columns: 84px 1fr; }
+  .project-code { font-size: 1.5rem; }
+  .project-main { padding: 16px 16px 4px; }
+  .project-body { padding: 0 16px 18px; }
+}

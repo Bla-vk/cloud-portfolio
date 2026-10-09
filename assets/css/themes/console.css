@@ -1,0 +1,29 @@
+/* ==========================================================
+   Console: dark ops console, amber accent, terminal-style project headers.
+   Link this file after base.css in index.html to use it.
+   ========================================================== */
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap");
+
+:root {
+  --bg: #0A0E17; --surface: #111826; --ink: #E6EAF2; --muted: #98A4BA; --line: #26324A; --chip-bg: #0E1522;
+  --accent: #F2A93B; --accent-ink: #0A0E17; --link: #F2A93B; --focus: #F2A93B;
+  --ok: #6EE7A8; --warn: #F2A93B;
+  --radius: 10px; --btn-radius: 8px; --chip-radius: 6px;
+  --font-display: "Space Grotesk", system-ui, sans-serif; --font-body: "Inter", system-ui, sans-serif;
+  --nav-bg: rgba(10, 14, 23, .92); --nav-ink: #E6EAF2; --nav-border: 1px solid #26324A;
+  --h1-size: clamp(2.7rem, 6.4vw, 4.8rem); --h1-leading: 1.04; --h1-weight: 700; --h1-tracking: -.025em;
+  --h2-size: 2.2rem; --h2-weight: 700; --section-pad: 76px;
+  --proj-cols: repeat(2, 1fr); --proj-gap: 20px;
+}
+
+.btn:hover { color: var(--accent-ink); background: var(--ink); border-color: var(--ink); }
+.btn-primary:hover { color: var(--accent-ink); background: #FFD08A; border-color: #FFD08A; }
+.now { border-top: 3px solid var(--accent); }
+.now h2 { font-family: "JetBrains Mono", monospace; font-size: .95rem; font-weight: 500; color: var(--accent); }
+.project { padding: 24px; }
+.project:hover { border-color: var(--accent); }
+.project-code { display: block; margin-bottom: 8px; font-family: "JetBrains Mono", monospace; font-size: .82rem; color: var(--accent); }
+.project-code::before { content: "$ "; color: var(--muted); }
+.chips { margin-bottom: 16px; }
+.chips li { font-family: "JetBrains Mono", monospace; font-size: .76rem; }
+.wordmark { font-family: "JetBrains Mono", monospace; font-size: 1.05rem; }

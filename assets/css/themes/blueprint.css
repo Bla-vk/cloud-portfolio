@@ -1,0 +1,28 @@
+/* ==========================================================
+   Blueprint: dark navy engineering drawing with a grid, corner marks and drawing numbers.
+   Link this file after base.css in index.html to use it.
+   ========================================================== */
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@500;600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap");
+
+:root {
+  --bg: #0C2A4E; --surface: rgba(255, 255, 255, .03); --ink: #E9F2FB; --muted: #A9C0D8; --line: #4C79A8; --chip-bg: transparent;
+  --accent: #7FE0FF; --accent-ink: #06223F; --link: #7FE0FF; --focus: #FFD166;
+  --ok: #8DF0B5; --warn: #FFD166;
+  --radius: 0; --btn-radius: 0; --chip-radius: 0;
+  --font-display: "IBM Plex Sans Condensed", "Arial Narrow", sans-serif; --font-body: "IBM Plex Sans", system-ui, sans-serif;
+  --nav-bg: #0A2342; --nav-ink: #E9F2FB; --nav-border: 1px solid #4C79A8;
+  --h1-size: clamp(2.7rem, 6.4vw, 4.8rem); --h1-leading: 1.04; --h1-weight: 600; --h1-tracking: -.01em;
+  --h2-size: 2.2rem; --h2-weight: 600; --section-pad: 76px;
+  --proj-cols: repeat(2, 1fr); --proj-gap: 24px;
+}
+
+body { background-image: linear-gradient(rgba(127, 224, 255, .07) 1px, transparent 1px), linear-gradient(90deg, rgba(127, 224, 255, .07) 1px, transparent 1px); background-size: 32px 32px; }
+.project { padding: 26px; }
+.project::before, .project::after { content: ""; position: absolute; width: 16px; height: 16px; border: 0 solid var(--accent); }
+.project::before { top: -1px; left: -1px; border-top-width: 3px; border-left-width: 3px; }
+.project::after { right: -1px; bottom: -1px; border-right-width: 3px; border-bottom-width: 3px; }
+.project-code { display: block; margin-bottom: 6px; font-family: "IBM Plex Mono", monospace; font-size: .8rem; color: #FFD166; }
+.chips { margin-bottom: 16px; }
+.now { border-style: dashed; }
+.btn:hover { color: #06223F; background: #E9F2FB; }
+

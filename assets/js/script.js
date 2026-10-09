@@ -1,39 +1,52 @@
-  const navToggle = document.getElementById('navToggle');
-  const navLinks = document.getElementById('navLinks');
-  navToggle.addEventListener('click', () => {
-    const open = navLinks.classList.toggle('open');
-    navToggle.setAttribute('aria-expanded', open);
-  });
-  navLinks.querySelectorAll('a').forEach(a => {
-    a.addEventListener('click', () => {
-      navLinks.classList.remove('open');
-      navToggle.setAttribute('aria-expanded', 'false');
-    });
-  });
+(function () {
+  'use strict';
 
-  const sections = document.querySelectorAll('main section[id]');
-  const links = document.querySelectorAll('.nav-links a');
-  const spy = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      const link = document.querySelector(`.nav-links a[href="#${entry.target.id}"]`);
-      if (!link) return;
-      if (entry.isIntersecting) {
-        links.forEach(l => l.classList.remove('active'));
-        link.classList.add('active');
+  var root = document.documentElement;
+  var projects = document.querySelectorAll('.project');
+
+  // Some styles (editorial) set --collapsible: 1 so projects behave as expandable rows.
+  // Every other style shows all projects open.
+  function collapsible() {
+    return getComputedStyle(root).getPropertyValue('--collapsible').trim() === '1';
+  }
+
+  function setupProjects() {
+    var on = collapsible();
+    projects.forEach(function (d, i) {
+      var summary = d.querySelector('summary');
+      if (on) {
+        summary.removeAttribute('tabindex');
+        d.open = i === 0;
+      } else {
+        summary.setAttribute('tabindex', '-1');
+        d.open = true;
+      }
+      summary.addEventListener('click', function (e) {
+        if (!collapsible()) e.preventDefault();
+      });
+    });
+  }
+
+  // Run after the stylesheet (and its custom properties) has applied.
+  if (document.readyState === 'complete') setupProjects();
+  else window.addEventListener('load', setupProjects);
+
+  // Mobile menu
+  var toggle = document.getElementById('navToggle');
+  var links = document.getElementById('navLinks');
+  if (toggle && links) {
+    toggle.addEventListener('click', function () {
+      var open = links.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', String(open));
+    });
+    links.addEventListener('click', function (e) {
+      if (e.target.tagName === 'A') {
+        links.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
       }
     });
-  }, { rootMargin: '-45% 0px -45% 0px' });
-  sections.forEach(s => spy.observe(s));
+  }
 
-  const reveals = document.querySelectorAll('.reveal');
-  const reveal = new IntersectionObserver((entries, obs) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('in-view');
-        obs.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.12 });
-  reveals.forEach(el => reveal.observe(el));
-
-  document.getElementById('year').textContent = new Date().getFullYear();
+  var year = document.getElementById('year');
+  if (year) year.textContent = new Date().getFullYear();
+})();
